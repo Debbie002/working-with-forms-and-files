@@ -79,7 +79,7 @@ function getData(){
             body: JSON.stringify(data)
         }).then(response =>response.json())
         .then(data =>{
-            // window.location = "database.json"
+            window.location = "database.json"
             console.log("good", data);
         })
         
