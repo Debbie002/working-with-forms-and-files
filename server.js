@@ -23,6 +23,8 @@ const handleRequest = ((req, res)=>{
         })
         req.on("end", ()=>{
             const data = JSON.parse(body)
+            console.log(data);
+            
             fs.appendFile("database.json",JSON.stringify(data) + ", \n", (error)=>{
                 if(error){
                     res.writeHead(500, {"Content-Type": "application/json",

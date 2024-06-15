@@ -76,12 +76,12 @@ function getData(){
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data, console.log(data))
         }).then(response =>response.json())
         .then(data =>{
             
             console.log("good", data);
-            // window.location = "database.json"
+            window.location = "database.json"
         })
         
     } catch (error) {
