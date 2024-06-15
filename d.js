@@ -71,7 +71,7 @@ function getData(){
     }
 
     try {
-        fetch("https://working-with-forms-and-files.onrender.com", {
+        fetch("https://working-with-forms-and-files.onrender.com/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
