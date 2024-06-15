@@ -71,7 +71,7 @@ function getData(){
     }
 
     try {
-        fetch("http://localhost:3022/submit", {
+        fetch("https://working-with-forms-and-files.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
