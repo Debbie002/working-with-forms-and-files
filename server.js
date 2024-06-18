@@ -1,5 +1,6 @@
 const http = require("http")
-const fs = require("fs")
+const fs = require("fs");
+const { log } = require("console");
 
 
 const handleRequest = ((req, res)=>{
@@ -23,9 +24,10 @@ const handleRequest = ((req, res)=>{
         })
         req.on("end", ()=>{
             const data = JSON.parse(body)
-            console.log(data);
+            // console.log(data);
             
             fs.appendFile("database.json",JSON.stringify(data) + ", \n", (error)=>{
+            
                 if(error){
                     res.writeHead(500, {"Content-Type": "application/json",
                     "Access-Control-Allow-Origin": "*"
@@ -36,7 +38,7 @@ const handleRequest = ((req, res)=>{
                 "Access-Control-Allow-Origin": "*"
 
                 })
-                res.end(JSON.stringify({message: "saved"}, console.log(data)))
+                res.end(JSON.stringify({message: "saved"}))
 
             })
 

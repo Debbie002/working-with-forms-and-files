@@ -1,63 +1,108 @@
 *{
-    padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
     box-sizing: border-box;
-}
+    font-family: sans-serif;
 
+}
 body{
-    background: whitesmoke;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
-    align-content: center;
-
+    align-items: center;
+    background-color: #161516;
+}
+.align{
+    height: 80px;
+    margin-bottom: 12px; 
+}
+.align input{
+    width: 500px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    padding: 0 15px;
+    border: 2px solid #f3daf6;
+    background: transparent;
+    color: whitesmoke;
+    outline: none;
     
-}
-label{
-    font-size: 1.4rem;
-}
 
-input{
-    width: 25%;
-    height: 50px;
-    padding-left: 10px;
-    font-size: 1.4rem;
-    /* margin: 20px; */
-    margin-top: 20px;
-    margin-bottom: 2px;
-    border-radius: 8px;
-    border: 1px solid #080808;
-    justify-content: center;
-    align-content: center;
-    letter-spacing: 0.097m;
-    
 }
-
 
 button{
     height: 6vh;
-    width: 15%;
+    width: 100%;
     font-size: 1.2rem;
     font-weight: 600;
-    background: rgb(193, 193, 237);
+    /* background: rgb(193, 193, 237); */
+    background: #fff;
     border-radius: 6px;
     margin-top: 20px;
+    font-weight: 600;
     
 }
 button:hover{
-    background: rgb(73, 73, 242);
+    /* background: #aaa; */
+    background: transparent;
+    color: #fff;
+    /* color: black; */
+    font-weight: 800;
+}
+label{
+    display: block;
+    font-size: 1.2em;
     color: whitesmoke;
 }
-.error, .error1, .error2, .error3, .error4, .error5{
-    color: red;
-    font-size: 1.4rem;
-}
-
-
 select{
-    margin-top: 30px;
+    
     font-size: 1.6rem;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    background: whitesmoke;
+} 
 
+.error, .error1, .error2, .error3, .error4, .error5{
+    color: rgb(193, 49, 49);
+    font-size: 1rem;
 }
+
+
+
+
+@media screen and (max-width: 500px) {
+    .align {
+        margin-bottom: 5px; 
+    }
+
+    .align input {
+        width: 100%;
+        font-size: 1em;
+        height: 35px;
+    }
+
+    button {
+        height: 6vh;
+        width: 100%;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    select {
+        width: 100%;
+        font-size: 1rem;
+        height: 22px;
+        border-radius: 5px;
+    }
+
+    .error, .error1, .error2, .error3, .error4, .error5 {
+        font-size: 0.9rem;
+    }
+}
+
