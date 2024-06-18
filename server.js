@@ -38,7 +38,7 @@ const handleRequest = ((req, res)=>{
                 "Access-Control-Allow-Origin": "*"
 
                 })
-                res.end(JSON.stringify({message: "saved"}))
+                res.end(JSON.stringify({message: "saved"}, console.log(data)))
 
             })
 
